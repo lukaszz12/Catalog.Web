@@ -10,7 +10,7 @@ import styles from './styles.scss';
 
 import Home from './scenes/Home';
 import Carrer from './scenes/Carrer';
-import Nav from './scenes/Nav';
+import Nav from './components/Nav';
 
 class App extends React.Component {
     render () {
