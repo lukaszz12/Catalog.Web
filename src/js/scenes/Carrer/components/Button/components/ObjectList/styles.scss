@@ -1,0 +1,13 @@
+:local(.object-list){
+    .back{
+        display: block;
+    }
+
+    ul{
+        list-style-type: none;
+        li{
+            cursor: pointer;
+        }
+    }
+    
+}

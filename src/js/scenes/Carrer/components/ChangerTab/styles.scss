@@ -1,0 +1,11 @@
+:local(.change-type){
+    font-size: 40px;
+    display: flex;
+    align-items: center;
+    padding: 5px;
+    &:hover{
+        background: #dfdddd;
+        padding: 5px;
+        border-radius: 5px;
+    }
+}

@@ -1,0 +1,12 @@
+:local(.tooltip){
+    position: relative;
+
+    .tooltip-content{
+        position: absolute;
+        z-index: 2;
+        left: 0;
+        width:auto;
+        white-space: nowrap;
+        
+    }
+}

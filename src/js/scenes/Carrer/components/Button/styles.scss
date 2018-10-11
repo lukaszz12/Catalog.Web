@@ -1,0 +1,42 @@
+:local(.container){
+    margin-bottom: 10px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+
+    .history-selected-objects{
+        font-weight: bold;
+    }
+
+    .button{
+        display: flex;
+        position: relative;
+        
+        button{
+            width: 220px;
+            height: 40px;
+            background: #16a085;
+            border: none;
+            color: #ffffff;
+            text-transform: uppercase;
+            border-radius: 20px;
+
+            &:focus{
+                outline: 0 !important;
+            }
+        }
+    }   
+    .container-objects{
+        width: 400px;
+        position: absolute;
+        margin-top: 41px; 
+        z-index: 1;
+        background-color: #ffffff;
+
+        ul{
+            padding: 0;
+        }
+    }
+}

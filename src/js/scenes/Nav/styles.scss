@@ -1,0 +1,20 @@
+:local(.navigation){
+    ul{
+        margin: 0;
+        padding: 12px 30px;
+        display: flex;
+        background: #2c3e50;
+        li{
+            list-style: none;
+            padding-right: 15px;
+            a{
+                text-decoration: none;
+                text-transform: uppercase;
+                color: #dddfd4; 
+                &:hover{
+                    color: #b5b5b7;
+                } 
+            }
+        }
+    }
+}

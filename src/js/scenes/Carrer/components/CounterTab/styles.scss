@@ -1,0 +1,23 @@
+:local(.counter-tab){
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        list-style: none;
+        padding: 0;
+        justify-content: flex-end;
+
+        li {
+            margin-left: 5px;
+            
+            div{
+                list-style: none;
+                width: 20px;
+                height: 4px;
+                background-color: #374258;
+
+                &.selected{
+                    background-color: #cccccc;
+                }
+            }
+        }
+}
