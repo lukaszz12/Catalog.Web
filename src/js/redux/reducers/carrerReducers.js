@@ -125,9 +125,9 @@ myUpdate.extend('$closeOtherButtons', function(buttonTypes, tab) {
 });
 
 myUpdate.extend('$updateButtonsValues', function(buttons, tab) {
-    tab.localizationData.values = buttons.find(x => x.type === 0).values;
-    tab.universityData.values =  buttons.find(x => x.type === 1).values;
-    //tab.subjectData.values =  buttons.find(x => x.type === 2).values;
+    tab.localizationData.values = buttons.find(x => x.type === "LocalizationData").values;
+    tab.universityData.values =  buttons.find(x => x.type === "UniversityData").values;
+    tab.subjectData.values =  buttons.find(x => x.type === "SubjectData").values;
 
     return tab;
 });

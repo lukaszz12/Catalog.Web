@@ -12,10 +12,17 @@ import Home from './scenes/Home';
 import Carrer from './scenes/Carrer';
 import Nav from './components/Nav';
 
+import ApolloClient from 'apollo-boost';
+import {ApolloProvider} from 'react-apollo';
+
+var client = new ApolloClient({
+    uri: 'http://localhost:52478/GraphQL/'
+});
+
 class App extends React.Component {
     render () {
         return ( 
-            <div>
+            <ApolloProvider client={client}>
                 <Router history={hashHistory}>
                     <div>
                         <Nav />
@@ -27,7 +34,7 @@ class App extends React.Component {
                         </div>
                     </div>
                 </Router>
-            </div>
+            </ApolloProvider>
         );
     }
 }

@@ -1,6 +1,10 @@
 import CarrerConstants from 'ReduxConstants/carrerConstants';
 import { service } from 'Services/carrerService';
 import Api from 'Helpers/api';
+// import {getButtons, getDefaultButtons} from '../../carrerQueryProvider';
+import Courses from '../../carrerQueryProvider';
+import gql from 'graphql-tag';
+import axios from 'axios';
 
 export const carrerActions = {
     createTab,
@@ -14,16 +18,23 @@ export const carrerActions = {
 
 function init(){
     return (dispatch, getState) => {
-        debugger;
-        Api.get('/carrer/getdefaultdata').then(response => {
+        var data = {
+            query: `query {getDefaultData{
+                type
+                values{
+                    id
+                    level
+                    name
+                }
+            }}`};
+
+        axios.post('http://localhost:52478/GraphQL', data).then( (response) => {
             var data = {
                 tabIndex: 0,
-                buttons: response
-            };
-            debugger;
-
+                buttons: response.data.data.getDefaultData
+            }
             dispatch({type: CarrerConstants.INIT_BUTTONS_VALUES, data});
-        });
+        })
     }
 }
 
